@@ -1,10 +1,10 @@
-# language: pt
-@magazine_luiza
-Funcionalidade: Adicionar produto buscado no carrinho
+#language: pt
 
-  @busca_produto_carrinho
-  Cenário: Busca de produto
-      Dado que esteja na página home do Magazine Luiza
+@magazine_luiza
+Funcionalidade: Magazine Luiza
+
+  Cenário: Adicionar produto buscado no carrinho
+      Dado que esteja na home
       E introduzir no campo de busca a palavra computador
       Quando exibido o resultado, selecionar o primeiro produto
       E dentro da página do produto selecionar a opção de Adicionar à sacola

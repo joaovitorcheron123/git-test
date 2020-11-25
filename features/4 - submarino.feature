@@ -1,19 +1,28 @@
-# language: pt
+#language: pt
+
 @submarino
-Funcionalidade: Autenticação
+Funcionalidade: Submarino
+  Contexto: Abrir login
+    Esquema do Cenário: Realizar login
+        Dado que esteja na home
+        E sendo usuário cadastrado
+        Quando selecionar a opção Entrar
+        E logar com os dados de "<email>" e "<senha>" válidos
+        Então deverá ter todas as opções de cliente disponíveis
 
-  @fazer_login
-  Esquema do Cenário: Fazer o login como cliente
-      Dado que esteja na página home da Submarino
-      E seja usuário cadastrado
-      Quando selecionar a opção Entrar
-      E logar com os dados de "<email>" e "<senha>" válidos
-      Então deverá ter todas as opções de cliente disponíveis
+        Exemplos:
+          | email                   | senha |
+          | automacao123@test.com   | 12345 |
+          | automacao@test123.com   | abcde |
+          | invalido123             | 12345 |
 
-      Exemplos:
-      | email                   | senha |
-      | automacao123@test.com   | 12345 |
-      | automacao@test123.com   | abcde |
-      | invalido123             | 12345 |
 
+      Esquema do Cenário: Realizar Login Exception
+        Quando realizar login com "<email>" e "<senha>"
+        Então deverá ser exibida a mensagem "<mensagem>"
+  
+        Exemplos:
+          | email                  | senha  | mensagem                   |
+          | automacao123@test.com  | errada | E-mail ou senha incorretos |
+          | automacao@test123.com  |        | E-mail ou senha incorretos |
 
