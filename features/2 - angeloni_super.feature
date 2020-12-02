@@ -7,4 +7,4 @@ Funcionalidade: Angeloni
       Dado que esteja na home
       Quando selecionar o primeiro item da sessão departamentos
       E selecionar o primeiro produto exibido na lista
-      Então deverá ser aberta a página do produto elecionado
+      Então deverá ser aberta a página do produto selecionado

@@ -5,7 +5,6 @@ Funcionalidade: Submarino
   Contexto: Abrir login
     Esquema do Cenário: Realizar login
         Dado que esteja na home
-        E sendo usuário cadastrado
         Quando selecionar a opção Entrar
         E logar com os dados de "<email>" e "<senha>" válidos
         Então deverá ter todas as opções de cliente disponíveis
