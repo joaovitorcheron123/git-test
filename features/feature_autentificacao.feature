@@ -25,3 +25,15 @@ Funcionalidade: Autentificação
           | automacao123@test.com  | errada | Usuário ou senha inválidos |
           | automacao@test123.com  |        | Usuário ou senha inválidos |
 
+      Esquema do Cenário: Cadastro
+        Dado que esteja na home
+        Quando selecionar a opção Registrar
+        E inserir dados para "<email>" e "<senha>" válidos
+        Então deverá ser realizado o cadastro
+
+        Exemplos:
+          | email                   | senha |
+          | automacao123@test.com   | 12345 |
+          | automacao@test123.com   | abcde |
+          | invalido123             | 12345 |
+
