@@ -2,12 +2,16 @@
   "name": "github_api-cypress",
   "version": "1.0.0",
   "main": "index.js",
+  "keywords": [],
   "license": "MIT",
   "scripts": {
     "cypress:open": "./node_modules/.bin/cypress open",
     "cypress:run": "./node_modules/.bin/cypress run"
- },
+  },
   "devDependencies": {
     "cypress": "^6.2.0"
+  },
+  "dependencies": {
+    "eslint-plugin-cypress": "^2.11.2"
   }
 }

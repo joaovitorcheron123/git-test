@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-const payloadCreateRepo = require('../payloads/create-repos.json');
+const payloadCreateRepo = require('../payloads/create-repos.json')
 
 function createRepos() {
   return cy.request({
@@ -8,11 +8,12 @@ function createRepos() {
     url: 'user/repos',
     failOnStatusCode: false,
     headers: {
-      Authorization: `Bearer c95ec3acfd67b122f381e4f8239c70550e716c60`,
+      Authorization: " --> TOKEN ",
       "Content-type": "application/json"
     },
-    body: payloadCreateRepo
-  })
+    body: { payloadCreateRepo }
+
+  });
 }
 
 export { createRepos };

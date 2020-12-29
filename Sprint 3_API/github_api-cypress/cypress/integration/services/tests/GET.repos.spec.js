@@ -5,7 +5,6 @@ describe('GET Repositories', () =>{
     GET_repos.repos().should((response) => {
       expect(response.status).to.equals(200);
       expect(response.body).to.be.not.null;
-
     })
   });  
 });
